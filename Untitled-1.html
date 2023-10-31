@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Темконтроль Формы JS</title>
+    <style>
+        hr {
+            border: none;
+            /* Убираем границу */
+            background-color: rgb(203, 203, 203);
+            /* Цвет линии */
+            height: 1px;
+            /* Толщина линии */
+        }
+
+        form {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='box1'>
+        <form class='form' id='form'>
+            <!--Имя-->
+            <label>
+                <span class="input-title">Как вас зовут?*:</span>
+                <input class="name" type="name" id="name" maxlength="10" placeholder="Введите ваше имя" required>
+            </label>
+            <hr>
+
+            <!--Адрес-->
+            <label>
+                <span class="input-title">Email адрес:*</span>
+                <input class="email" type="email" id="email" placeholder="vashapochta@gmail.com" required>
+            </label>
+            <hr>
+
+            <!--Вопрос-->
+            <label>
+                <span class="input-title">Вопрос:*</span>
+                <input class="que" type="que" id="que" placeholder="Опишите вопрос">
+            </label>
+            <div>
+                <button type="submit" onClick='doTimer()'>Register</button>
+            </div>
+        </form>
+    </div>
+    <script type='text/javascript'>
+
+        document.querySelector('.name').addEventListener('input', function () {
+            this.value = this.value.replace(/[^А-Яа-яЁё -]/g, '');
+        })
+        function doTimer() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const que = document.getElementById("que").value;
+
+            document.cookie = `name=${name};`;
+            document.cookie = `email=${email};`;
+            const cookies = document.cookie;
+
+            if (name.trim() === '' || email.trim() === '' || que.trim() === '') {
+                alert("Пожалуйста, заполните все обязательные поля.");
+                return; // Остановить выполнение, если валидация не прошла
+            }
+            else (alert(`Имя: ${name} \nEmail: ${email}`));
+
+            JSON.stringify(name, email, que);
+            
+        }
+    </script>
+</body>
+
+</html>
