@@ -1,0 +1,11 @@
+<?php
+include('z1.php');
+print("<br/><br/>");
+include('z2.php');
+print("<br/>");
+include('z3.php');
+print("<br/><br/>");
+include('z4.php');
+print("<br/><br/>");
+include('z5.php');
+?>
