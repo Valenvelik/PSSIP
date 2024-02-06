@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        <link href="temkon.css" rel="stylesheet" type = "text/css">
+		<title>Цыганенко Валентина Викторовна</title>
+        <meta name = "keywords" content = "Темконтроль, пссип">
+
+        <style >     /* Параметры фона */
+            BODY {
+             background: url(img/прир.jpg) ; 
+            }
+        </style>
+
+        <style type="text/css">         /*Параметры текста*/
+            p { 
+             font-family: 'Times New Roman', Times, serif; /* Гарнитура шрифта */ 
+             font-size: 12pt; /* Размер текста */
+            }
+        </style>
+
+        <style>     /*Параметры картинок*/
+            img {
+             border: 3px solid #1894bd;
+            }
+            .aligncenter {
+                 text-align: center;
+              }
+            </style>
+	</head>
+	
+	<body>
+       
+        <h3><div align=" right ">Цыганенко Валентина Викторовна</div></h3>
+       
+        <font color="blue"><b>ПЗТ-36</b></font>
+        
+        <div id="t1" align=" right ">3<sub> курс</sub></div>
+        
+        <p align ="center"><u>Люблю рисовать, петь, играть в волейбол, смотреть аниме</u></p>
+       
+        <ol type="I" start="4"> <li>Зима</li>       <!--Список-->
+        <li>Весна</li> 
+        <li>Лето</li>
+        </ol>
+        
+        <p class="aligncenter"><img src = "img/cora.jpg" height = "100" width = "70">       <!--Просто картинка-->
+            <style>
+              .aligncenter {
+                 text-align: center;
+                }
+            </style>
+        </p>
+        
+        <p><a href="https://ru.wikipedia.org/wiki/HTML"><img src = "img/magdonal.jpg"  height = "200" width = "300">        <!--Внешняя ссылка-->
+        </a></p>
+
+        <p><a href = "#t1">К курсу</a></p>      <!--Внутрення ссылка-->
+
+        <table border="2" width="500">          <!--Таблица-->
+            <tr>
+                <th rowspan="2" colspan="3" class="first"></th>
+                <th BGCOLOR="teal" colspan="2">Показатели</th>
+                <th BGCOLOR="#CCCCCC" rowspan="2">Проценты</th>
+            </tr>
+            <tr BGCOLOR="teal">
+              <td>Рост</td>
+              <td>Вес</td>
+            </tr>
+            <tr colspan="3">
+                
+                <td colspan="3">Мужчины</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>   
+        </table><br>
+        
+        <br><form>
+        <fieldset>          <!--Группирование элементов формы-->
+            <legend>Авторизация</legend>
+            <p><label for="name">Имя пользователя</label> <input type="text" id="name"></p>
+            <p><label for="email">Пароль</label> <input type="email" id="email"></p>
+            <input type="radio" name="browser" value="ie"> Запомнить меня<Br>
+            <p><input type="submit" value="Войти">     <input type="submit" value="Отмена"></p>   
+            <p><u>Забыли пароль?</u></p>
+            <p><u>Регистрация</u></p>    
+        </fieldset>
+        </form>    
+	</body>
+</html>
